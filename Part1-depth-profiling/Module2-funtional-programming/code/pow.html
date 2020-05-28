@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 闭包案例-求平方
+    function pow(pow) {
+        return function (number) {
+            return Math.pow(number, pow)
+        }
+    }
+    const pow2 = pow(2);
+    const pow32 = pow2(3);
+    const pow42 = pow2(4);
+    console.log(pow32, pow42);
+    </script>
+</body>
+</html>

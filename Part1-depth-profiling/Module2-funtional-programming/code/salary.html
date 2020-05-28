@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 闭包案例-员工工资
+    function makeSalary(base) {
+        return function (performence) {
+            return base + performence;
+        }
+    }
+    const level1 = makeSalary(10000);
+    const level2 = makeSalary(20000);
+    console.log(level1(15000), level2(1000));
+    </script>
+</body>
+</html>
